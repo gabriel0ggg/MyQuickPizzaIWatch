@@ -1,14 +1,37 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="MyQuickPizza_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label height="39" alignment="left" text="Tamaño de la Pizza" numberOfLines="2" id="XUm-it-Cs7"/>
+                        <button width="1" alignment="left" title="Chica" id="aVd-YK-msV">
+                            <connections>
+                                <action selector="requestChica" destination="AgC-eL-Hgc" id="27I-gq-uK0"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Mediana" id="qwc-NP-0JX">
+                            <connections>
+                                <action selector="requestMediana" destination="AgC-eL-Hgc" id="4qb-ac-taF"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Grande" id="bC2-Vm-ScL">
+                            <connections>
+                                <action selector="requestGrande" destination="AgC-eL-Hgc" id="wdN-hQ-ysg"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
         </scene>
@@ -28,10 +51,149 @@
             </objects>
             <point key="canvasLocation" x="220" y="643"/>
         </scene>
+        <!--mass-->
+        <scene sceneID="W8t-t7-t6r">
+            <objects>
+                <controller identifier="mass" id="8eD-7C-iO0" customClass="InterfaceControllerMass" customModule="MyQuickPizza_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Tipo de masa:" id="fpI-y9-TDR"/>
+                        <button width="1" alignment="left" title="Delgada" id="7HO-CV-9wQ">
+                            <connections>
+                                <action selector="requestDelgada" destination="8eD-7C-iO0" id="6Gf-IK-xAq"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Crujiente" id="FS7-GJ-TQJ">
+                            <connections>
+                                <action selector="requestCrujiente" destination="8eD-7C-iO0" id="EOe-io-fOF"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Gruesa" id="Gii-Q9-aH2">
+                            <connections>
+                                <action selector="requestGruesa" destination="8eD-7C-iO0" id="ulY-HA-QY2"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="468" y="338"/>
+        </scene>
+        <!--cheese-->
+        <scene sceneID="WN3-Cp-0DC">
+            <objects>
+                <controller identifier="cheese" id="fJZ-4W-od5" customClass="InterfaceControllerCheese" customModule="MyQuickPizza_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Tipo de queso" id="XaG-2l-zWr"/>
+                        <button width="1" alignment="left" title="Mozzarela" id="nig-3C-D4g">
+                            <connections>
+                                <action selector="requestMozzarela" destination="fJZ-4W-od5" id="5k1-FC-xVa"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Cheddar" id="8qA-Wk-PuF">
+                            <connections>
+                                <action selector="requestCheddar" destination="fJZ-4W-od5" id="YyR-B2-MHU"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Parmesano" id="SrF-a0-dBz">
+                            <connections>
+                                <action selector="requestParmesano" destination="fJZ-4W-od5" id="kE1-sF-h3h"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Sin queso" id="0TK-nI-axU">
+                            <connections>
+                                <action selector="requestWithout" destination="fJZ-4W-od5" id="J1a-W9-QEv"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="722" y="356"/>
+        </scene>
+        <!--ingredients-->
+        <scene sceneID="HSj-7V-tY4">
+            <objects>
+                <controller identifier="ingredients" id="tzh-Bj-zX0" customClass="InterfaceControllerIngredients" customModule="MyQuickPizza_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Ingredientes" id="ga0-gx-Zao"/>
+                        <switch width="1" alignment="left" title="Jamón" id="O5M-Go-m2c">
+                            <connections>
+                                <action selector="setJamon:" destination="tzh-Bj-zX0" id="hkw-TI-UQX"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Pepperoni" id="b3g-Vs-rUP">
+                            <connections>
+                                <action selector="setPepperoni:" destination="tzh-Bj-zX0" id="cXZ-NQ-5j4"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Pavo" id="GrR-xL-avM">
+                            <connections>
+                                <action selector="setPavo:" destination="tzh-Bj-zX0" id="RGq-lP-QsW"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Salchicha" id="2Cb-RG-OYy">
+                            <connections>
+                                <action selector="setSalchicha:" destination="tzh-Bj-zX0" id="xji-Kw-lU3"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Aceituna" id="YvG-zW-LK1">
+                            <connections>
+                                <action selector="setAceituna:" destination="tzh-Bj-zX0" id="9G1-iS-wvN"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Cebolla" id="g8m-YU-gGl">
+                            <connections>
+                                <action selector="setCebolla:" destination="tzh-Bj-zX0" id="bcx-SN-2T7"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Pimiento" id="3bs-iQ-U6n">
+                            <connections>
+                                <action selector="setPimiento:" destination="tzh-Bj-zX0" id="t7n-ac-KlJ"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Piña" id="IWJ-dv-gmi">
+                            <connections>
+                                <action selector="setPina:" destination="tzh-Bj-zX0" id="NFG-q1-9yu"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Anchoa" id="pkW-FJ-VEM">
+                            <connections>
+                                <action selector="setAnchoa:" destination="tzh-Bj-zX0" id="cLF-O5-CMf"/>
+                            </connections>
+                        </switch>
+                        <button width="1" alignment="left" title="Finalizar" id="RwY-gr-WGq">
+                            <connections>
+                                <action selector="requestPizza" destination="tzh-Bj-zX0" id="nGQ-jZ-q3v"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="966" y="480"/>
+        </scene>
+        <!--confirm-->
+        <scene sceneID="7nA-UE-fZC">
+            <objects>
+                <controller identifier="confirm" id="9Sv-Lk-kYc" customClass="InterfaceControllerConfirm" customModule="MyQuickPizza_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Confirmación" id="O5J-vb-Ghj"/>
+                        <label width="136" height="120" alignment="left" numberOfLines="7" id="qMi-f7-H5A"/>
+                        <group width="1" alignment="left" id="Lze-MF-zmn">
+                            <items>
+                                <button width="64" alignment="left" title="No" id="GIz-d6-gWD"/>
+                                <button width="68" alignment="left" title="Si" id="JtQ-I5-EKD"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="lblPizza" destination="qMi-f7-H5A" id="rHp-Oa-7Rz"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1221" y="356"/>
+        </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="MyQuickPizza_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>

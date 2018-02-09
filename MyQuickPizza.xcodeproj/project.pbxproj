@@ -20,6 +20,11 @@
 		CE00A417202B5A85000AFFB4 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE00A416202B5A85000AFFB4 /* ExtensionDelegate.swift */; };
 		CE00A419202B5A85000AFFB4 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE00A418202B5A85000AFFB4 /* NotificationController.swift */; };
 		CE00A41B202B5A85000AFFB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE00A41A202B5A85000AFFB4 /* Assets.xcassets */; };
+		CE5EB586202BF3A1009A72E4 /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5EB585202BF3A1009A72E4 /* Pizza.swift */; };
+		CE5EB588202BF90B009A72E4 /* InterfaceControllerMass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5EB587202BF90B009A72E4 /* InterfaceControllerMass.swift */; };
+		CE5EB58A202C04CE009A72E4 /* InterfaceControllerCheese.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5EB589202C04CE009A72E4 /* InterfaceControllerCheese.swift */; };
+		CE5EB58C202C04F7009A72E4 /* InterfaceControllerIngredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5EB58B202C04F7009A72E4 /* InterfaceControllerIngredients.swift */; };
+		CE5EB58E202C053C009A72E4 /* InterfaceControllerConfirm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5EB58D202C053C009A72E4 /* InterfaceControllerConfirm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +88,11 @@
 		CE00A41A202B5A85000AFFB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE00A41C202B5A85000AFFB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE00A41D202B5A85000AFFB4 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		CE5EB585202BF3A1009A72E4 /* Pizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
+		CE5EB587202BF90B009A72E4 /* InterfaceControllerMass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceControllerMass.swift; sourceTree = "<group>"; };
+		CE5EB589202C04CE009A72E4 /* InterfaceControllerCheese.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceControllerCheese.swift; sourceTree = "<group>"; };
+		CE5EB58B202C04F7009A72E4 /* InterfaceControllerIngredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceControllerIngredients.swift; sourceTree = "<group>"; };
+		CE5EB58D202C053C009A72E4 /* InterfaceControllerConfirm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceControllerConfirm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +165,11 @@
 				CE00A41A202B5A85000AFFB4 /* Assets.xcassets */,
 				CE00A41C202B5A85000AFFB4 /* Info.plist */,
 				CE00A41D202B5A85000AFFB4 /* PushNotificationPayload.apns */,
+				CE5EB585202BF3A1009A72E4 /* Pizza.swift */,
+				CE5EB587202BF90B009A72E4 /* InterfaceControllerMass.swift */,
+				CE5EB589202C04CE009A72E4 /* InterfaceControllerCheese.swift */,
+				CE5EB58B202C04F7009A72E4 /* InterfaceControllerIngredients.swift */,
+				CE5EB58D202C053C009A72E4 /* InterfaceControllerConfirm.swift */,
 			);
 			path = "MyQuickPizza WatchKit Extension";
 			sourceTree = "<group>";
@@ -303,8 +318,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE5EB58C202C04F7009A72E4 /* InterfaceControllerIngredients.swift in Sources */,
+				CE5EB586202BF3A1009A72E4 /* Pizza.swift in Sources */,
 				CE00A419202B5A85000AFFB4 /* NotificationController.swift in Sources */,
+				CE5EB58A202C04CE009A72E4 /* InterfaceControllerCheese.swift in Sources */,
+				CE5EB58E202C053C009A72E4 /* InterfaceControllerConfirm.swift in Sources */,
 				CE00A417202B5A85000AFFB4 /* ExtensionDelegate.swift in Sources */,
+				CE5EB588202BF90B009A72E4 /* InterfaceControllerMass.swift in Sources */,
 				CE00A415202B5A85000AFFB4 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
